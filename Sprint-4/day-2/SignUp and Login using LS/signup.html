@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <form>
+            <input id="email" type="text" placeholder="enter email address">
+         <input id="phoneNum" type="number" placeholder="enter phone number">
+            <input id="password" type="password" placeholder="enter password">
+            <input type="submit" onclick="signup()">
+            <p><a href="signin.html">Login</a></p>
+        </form>
+
+    </div>
+   
+
+</body>
+
+<script>
+
+    
+// assigned event as inline to the input ****
+    function signup(){
+        event.preventDefault()
+
+        var userInfo = {
+            email : document.querySelector("form").email.value,
+            phoneNumber : document.querySelector("form").phoneNum.value,
+            password : document.querySelector("form").password.value
+        }
+
+        if(userInfo.email == "" || userInfo.phoneNumber == "" || userInfo.password == "")
+        {alert("Please fill all information")}
+       
+        else
+       {
+        localStorage.setItem("signInInfo",JSON.stringify(userInfo))
+        window.location.reload();
+       } 
+    }
+
+    
+
+</script>
+</html>

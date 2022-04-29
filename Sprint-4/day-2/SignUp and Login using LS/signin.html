@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <div id="container">
+
+        <form>
+            <input id="email" type="text" placeholder="enter email address">
+            <input id="password" type="password" placeholder="enter password">
+            <input type="submit" onclick="signup()">
+        </form>
+
+    </div>
+    
+</body>
+
+<script>
+    var form = document.querySelector("form")
+    var userInfo = JSON.parse(localStorage.getItem("signInInfo")) || [];
+
+    // adding event to the submit button******
+    form.addEventListener("submit",checkData)
+
+    function checkData(){
+      var enteredData = {
+          email : form.email.value,
+          password : form.password.value,
+      }
+
+      if(userInfo.email === enteredData.email && userInfo.password === enteredData.password)
+      {alert("Sign In successful");}
+
+      else if(userInfo.email != enteredData.email || userInfo.password != enteredData.password)
+      {alert("Invalid email or password");}
+
+    }
+</script>
+</html>

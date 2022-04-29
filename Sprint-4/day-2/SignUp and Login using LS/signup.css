@@ -1,0 +1,32 @@
+
+#container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width:20%;
+    height : auto;
+    margin:auto;
+    border-radius: 20px;
+    margin-top:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+p{
+    text-align: center;
+    color: rgb(84, 84, 195);
+    font-size: 25px;
+    text-decoration :none;
+   
+}
+input{
+    
+    display: block;
+    font-size:20px;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:0px;
+    margin-bottom:30px;
+    margin-top : 30px;
+    padding:20px;
+}
