@@ -1,0 +1,23 @@
+#body{
+    width : 100%;
+    height:auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+    margin : auto;
+}
+
+#body > div {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding : 10px;
+    border-radius: 10px;
+}
+
+img{
+    width:100%;
+}
+
+h1{
+    font-weight:bold;
+}
+
